@@ -19,6 +19,9 @@ $global-width: rem-calc(960);
 /// Default line height for all type. `$global-lineheight` is 24px while `$global-font-size` is 16px
 /// @type Number
 $global-lineheight: 1.5 !default;
+$global-menu-padding: 0.7rem 1rem;
+$global-menu-nested-margin: 1rem;
+$global-color-pick-contrast-tolerance: 0;
 
 /// Colors used for buttons, callouts, links, etc. There must always be a color called `primary`.
 /// @type Map
@@ -96,7 +99,10 @@ $global-text-direction: ltr !default;
 
 /// Enables flexbox for components that support it.
 /// @type Boolean
-$global-flexbox: false !default;
+$global-flexbox: true !default;
+
+$global-prototype-breakpoints: false !default;
+
 
 @if not map-has-key($foundation-palette, primary) {
   @error 'In $foundation-palette, you must have a color named "primary".';
@@ -113,9 +119,6 @@ $success-color: map-get($foundation-palette, success);
 $warning-color: map-get($foundation-palette, warning);
 $alert-color: map-get($foundation-palette, alert);
 
-// Remove this in 6.3
-$-zf-menu-icon-imported: false;
-$-zf-flex-classes-imported: false;
 
 @mixin foundation-global-styles {
   @include -zf-normalize;
