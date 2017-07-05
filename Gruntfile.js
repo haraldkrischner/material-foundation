@@ -20,8 +20,8 @@ module.exports = function(grunt) {
       my_target: {
         files: {
           'js/material-foundation.js': [
-            'bower_components/what-input/what-input.js',
-            'bower_components/foundation-sites/dist/foundation.js',
+            'bower_components/what-input/dist/what-input.js',
+            'bower_components/foundation-sites/dist/js/foundation.js',
             'js/src/ripple.js',
             'js/src/switches.js',
             'js/src/material-foundation.js'
